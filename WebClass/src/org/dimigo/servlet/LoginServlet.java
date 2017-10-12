@@ -2,7 +2,8 @@ package org.dimigo.servlet;
  
 import java.io.IOException;
 import java.io.PrintWriter;
- 
+import java.util.HashMap;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,6 +36,15 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
+	boolean result = true;
+	if(result){
+		HttpSession session = request.getSession();
+		user.setId(id);
+		
+	}
+	
+	RequestDispatcher rd = request.getRequestDispatcher("jsp/home/jsp");
+	
  
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -77,5 +87,9 @@ public class LoginServlet extends HttpServlet {
 		out.write(json.toString());
 		
 		out.close();
+	}
+}
+		
+	
 		
 	
