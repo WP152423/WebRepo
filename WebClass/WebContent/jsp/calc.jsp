@@ -30,7 +30,7 @@
 	//현재 일시 구하기
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a")
 %>
-	현재 시각은 <%=sdf.format(new Date()) %>
+	현재 시각은 <%= sdf.format(new Date()) %>
 
 
 
